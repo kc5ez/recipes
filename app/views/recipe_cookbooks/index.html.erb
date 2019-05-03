@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Recipes</h1>
+<%= form_tag(recipe_cookbooks_path, method: :get) do %>
+  <%= text_field_tag(:search, params[:search]) %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Blurb</th>
+      <th>Category</th>
+      <th>Time</th>
+      <th>Difficulty</th>
+      <th>Calories</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recipe_cookbooks.each do |recipe_cookbook| %>
+      <tr>
+        <td><%= recipe_cookbook.name %></td>
+        <td><%= recipe_cookbook.blurb %></td>
+        <td><%= recipe_cookbook.category %></td>
+        <td><%= recipe_cookbook.time %></td>
+        <td><%= recipe_cookbook.difficulty %></td>
+        <td><%= recipe_cookbook.calories %></td>
+        <td><%= link_to 'Show', recipe_cookbook %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

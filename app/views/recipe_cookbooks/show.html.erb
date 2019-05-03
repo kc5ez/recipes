@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1> <%= @recipe_cookbook[:name] %> </h1>
+
+<table>
+  <strong>Ingredients:</strong>
+
+
+  <tbody>
+    <% @ingredients.zip(@recipe_ingredients).each do |ingredient, amount| %>
+      <tr>
+        <td><%= amount.amount %> <%= ingredient.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<table>
+  <strong>Steps:</strong>
+
+  <tbody>
+    <% @recipe_instructions.each do |instruction| %>
+      <tr>
+        <td><%= instruction.step %>. <%= instruction.instruction %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  calories: 
+  blurb: MyText
+  category: MyString
+  time: 2019-04-30 16:15:12
+  difficulty: MyString
+  name: MyString
+
+two:
+  calories: 
+  blurb: MyText
+  category: MyString
+  time: 2019-04-30 16:15:12
+  difficulty: MyString
+  name: MyString
